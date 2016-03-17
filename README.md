@@ -1,4 +1,4 @@
-Nvidia Benchmarking
+Caffe Benchmarking on Nvidia GPU
 --------------------
 Simple benchmarking of public open-source implementations of caffe. A summary is provided in the section below.
 
