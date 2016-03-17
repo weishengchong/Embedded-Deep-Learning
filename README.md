@@ -3,7 +3,7 @@ Nvidia Benchmarking
 Simple benchmarking of public open-source implementations of caffe. A summary is provided in the section below.
 
 Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA Titan X + Ubuntu 14.04.03 LTS
-Jetson: Nvidia TX1 + Ubuntu 14.04.1 LTS
+<p>Jetson: Nvidia TX1 + Ubuntu 14.04.1 LTS</p>
 
 **AlexNet @ 691MHz**
 
