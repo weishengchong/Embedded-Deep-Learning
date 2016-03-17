@@ -3,6 +3,11 @@
 namespace bp = boost::python;
 #endif
 
+/////////////////////////////////////////////
+//PSL
+//#define __TIMER_LAYER_ENABLE__
+//#define __BACKWARD_ENABLE__
+/////////////////////////////////////////////
 #include <gflags/gflags.h>
 #include <glog/logging.h>
 
@@ -350,9 +355,12 @@ int time() {
     for (int i = 0; i < layers.size(); ++i) {
       timer.Start();
       layers[i]->Forward(bottom_vecs[i], top_vecs[i]);
+      #ifdef __TIMER_LAYER_ENABLE__
       forward_time_per_layer[i] += timer.MicroSeconds();
+      #endif
     }
     forward_time += forward_timer.MicroSeconds();
+    #ifdef __BACKWARD_ENABLE__
     backward_timer.Start();
     for (int i = layers.size() - 1; i >= 0; --i) {
       timer.Start();
@@ -361,11 +369,13 @@ int time() {
       backward_time_per_layer[i] += timer.MicroSeconds();
     }
     backward_time += backward_timer.MicroSeconds();
+    #endif
     LOG(INFO) << "Iteration: " << j + 1 << " forward-backward time: "
       << iter_timer.MilliSeconds() << " ms.";
   }
   LOG(INFO) << "Average time per layer: ";
   for (int i = 0; i < layers.size(); ++i) {
+      #ifdef __TIMER_LAYER_ENABLE__  
     const caffe::string& layername = layers[i]->layer_param().name();
     LOG(INFO) << std::setfill(' ') << std::setw(10) << layername <<
       "\tforward: " << forward_time_per_layer[i] / 1000 /
@@ -373,6 +383,7 @@ int time() {
     LOG(INFO) << std::setfill(' ') << std::setw(10) << layername  <<
       "\tbackward: " << backward_time_per_layer[i] / 1000 /
       FLAGS_iterations << " ms.";
+      #endif
   }
   total_timer.Stop();
   LOG(INFO) << "Average Forward pass: " << forward_time / 1000 /
