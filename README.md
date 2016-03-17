@@ -3,6 +3,7 @@ Nvidia Benchmarking
 Environment Setup: Nvidia Titan X + Nvidia Jetson TX1 + Ubuntu 
 
 **AlexNet**
+
 `Batch Size: 1`
 
 | Network: Alexnet           |Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
