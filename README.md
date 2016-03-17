@@ -28,6 +28,8 @@ Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA Titan X + Ubuntu 14.
 | Memory (Mbytes)              | 2886            | 1146            |                |
 | GPU Utilization Average      | 99%             | 99%             |                |
 
+<p>-------------------------------------------------------------------------------------------------------------------------------------</p>
+
 **GoogleNet @ 691MHz**
 
 | Network: GoogleNet Batch 1   | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
@@ -50,3 +52,29 @@ Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA Titan X + Ubuntu 14.
 | Average Forward Pass (fps)   |                 | 76.5            | 976.6          |
 | Memory (Mbytes)              |                 | 3387            |                |
 | GPU Utilization Average      |                 | 99%             |                |
+
+<p>-------------------------------------------------------------------------------------------------------------------------------------</p>
+
+**Vgg16 @ 691MHz**
+
+| Network: Vgg16 Batch 1       | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| ---------------------------- |:---------------:|:---------------:|:--------------:|
+| Average Forward Pass (ms)    | 156.1           | 104.4           | 12             |
+| Average Forward Pass (fps)   | 6.4             | 9.6             | 83.5           |
+| Memory (Mbytes)              | 2019            | 1154            |                |
+| GPU Utilization Average      | 99%             | 99%             |                |
+
+| Network: Vgg16 Batch 64      | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| ---------------------------- |:---------------:|:---------------:|:--------------:|
+| Average Forward Pass (ms)    |                 | 5150.6          | 307.8          |
+| Average Forward Pass (fps)   |                 | 12.4            | 207.9          |
+| Memory (Mbytes)              |                 | 2971            |                |
+| GPU Utilization Average      |                 | 99%             |                |
+
+| Network: Vgg16 Batch 128     | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| ---------------------------- |:---------------:|:---------------:|:--------------:|
+| Average Forward Pass (ms)    |                 |                 | 606.8          |
+| Average Forward Pass (fps)   |                 |                 | 210.9          |
+| Memory (Mbytes)              |                 |                 |                |
+| GPU Utilization Average      |                 |                 |                |
+
