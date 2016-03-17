@@ -1,6 +1,9 @@
 Nvidia Benchmarking
 --------------------
-Environment Setup: Nvidia Titan X + Nvidia Jetson TX1 + Ubuntu 
+Simple benchmarking of public open-source implementations caffe. A summary is provided in the section below.
+
+Machine: ?-core Intel Xeon i7-5930K CPU @ ?GHz + NVIDIA Titan X + Ubuntu 14.04 x86_64?
+Jetson: Nvidia Tx1 + Ubuntu LT?
 
 **AlexNet**
 
