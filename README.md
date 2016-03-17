@@ -5,7 +5,7 @@ Simple benchmarking of public open-source implementations of caffe. A summary is
 Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA GeForce GTX Titan X + Ubuntu 14.04.03 LTS
 <p>Jetson: Nvidia Tegra X1 + Ubuntu 14.04.1 LTS</p>
 
-I took my source from <a href="https://github.com/BVLC/caffe">BVLC/caffe</a>.
+I took my source from <a href="https://github.com/NVIDIA/caffe/tree/caffe-0.14">Nvidia/caffe/tree/caffe-0.14</a>.
 <p>I run on these models; AlexNet, GoogLeNet and vgg16. I disabled the full backward pass and clock the time for a full forward pass only. Next, I averaged it over 100 iterations.</p>
 
 **AlexNet @ 691MHz**
