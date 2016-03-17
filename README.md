@@ -2,8 +2,10 @@ Nvidia Benchmarking
 --------------------
 Simple benchmarking of public open-source implementations of caffe. A summary is provided in the section below.
 
-Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA Titan X + Ubuntu 14.04.03 LTS
-<p>Jetson: Nvidia TX1 + Ubuntu 14.04.1 LTS</p>
+Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA GeForce GTX Titan X + Ubuntu 14.04.03 LTS
+<p>Jetson: Nvidia Tegra X1 + Ubuntu 14.04.1 LTS</p>
+
+I run on these models; AlexNet, GoogLeNet and vgg16. I clock the time for a full forward pass and average it over 100 iterations.
 
 **AlexNet @ 691MHz**
 
@@ -30,23 +32,23 @@ Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA Titan X + Ubuntu 14.
 
 <p>---------------------------------------------------------------------------------------------------------------------------------</p>
 
-**GoogleNet @ 691MHz**
+**GoogLeNet @ 691MHz**
 
-| Network: GoogleNet Batch 1   | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| Network: GoogLeNet Batch 1   | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
 | ---------------------------- |:---------------:|:---------------:|:--------------:|
 | Average Forward Pass (ms)    | 29.3            | 23.7            | 7.6            |
 | Average Forward Pass (fps)   | 34.2            | 42.1            | 131.4          |
 | Memory (Mbytes)              | 1274            | 950             |                |
 | GPU Utilization Average      | 97%             | 99%             |                |
 
-| Network: GoogleNet Batch 64  | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| Network: GoogLeNet Batch 64  | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
 | ---------------------------- |:---------------:|:---------------:|:--------------:|
 | Average Forward Pass (ms)    |                 | 839.2           | 68.8           |
 | Average Forward Pass (fps)   |                 | 76.3            | 930.9          |
 | Memory (Mbytes)              |                 | 1726            |                |
 | GPU Utilization Average      |                 | 99%             |                |
 
-| Network: GoogleNet Batch 128 | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| Network: GoogLeNet Batch 128 | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
 | ---------------------------- |:---------------:|:---------------:|:--------------:|
 | Average Forward Pass (ms)    |                 | 1672.3          | 131.1          |
 | Average Forward Pass (fps)   |                 | 76.5            | 976.6          |
