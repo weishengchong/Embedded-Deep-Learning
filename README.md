@@ -1,18 +1,20 @@
 Nvidia Benchmarking
 --------------------
-Simple benchmarking of public open-source implementations of caffe. A summary is provided in the section below.
+Simple benchmarking of public open-source implementations of caffe reported in <p><a href="https://www.nvidia.com/content/tegra/embedded-systems/pdf/jetson_tx1_whitepaper.pdf">NVIDIA TX1 Whitepaper</a>. Below is the summary about performance.
 
 Machine: 6-core Intel Xeon E5-2620 v3 CPU @ 2.4GHz + NVIDIA GeForce GTX Titan X + Ubuntu 14.04.03 LTS
 <p>Jetson: Nvidia Tegra X1 + Ubuntu 14.04.1 LTS</p>
 
 Here are the sources that I took from:
-<p><a href="https://github.com/NVIDIA/caffe/tree/caffe-0.14">NVIDIA FP16 (Nvidia/caffe/tree/caffe-0.14)</a>
-<p><a href="https://www.nvidia.com/content/tegra/embedded-systems/pdf/jetson_tx1_whitepaper.pdf">NVIDIA TX1 Whitepaper</a>
-<p>I run on these models; AlexNet, GoogLeNet and vgg16. I disabled the full backward pass and clock the time for a full forward pass only. Next, I averaged it over 100 iterations.</p>
+<p><a href="https://github.com/NVIDIA/caffe/tree/caffe-0.14">NVIDIA Titan X (FP32) #3 cmd caffe time </a>
+<p><a href="https://github.com/NVIDIA/caffe/tree/experimental/fp16">Tegra X1 (FP16) #2 cmd caffe_fp16 time</a>
+<p><a href="https://github.com/NVIDIA/caffe/tree/experimental/fp16">Tegra X1 (FP32) #1 cmd caffe time</a>
+
+<p>I run on these models; AlexNet, GoogLeNet and vgg16 using cuDNN4. I disabled the full backward pass and clock the time for a full forward pass only. Next, I averaged it over 100 iterations.</p>
 
 **AlexNet @ 691MHz**
 
-| Network: AlexNet Batch 1     | Tegra X1 (FP32) | Tegra X1 (FP16) | Titan X (FP32) |
+| Network: AlexNet Batch 1     | Tegra X1 (FP32)#3 | Tegra X1 (FP16)#1 | Titan X (FP32)#2 |
 | ---------------------------- |:---------------:|:---------------:|:--------------:|
 | Average Forward Pass (ms)    | 21.9            | 15.4            | 2.5            |
 | Average Forward Pass (fps)   | 45.7            | 65.1            | 408.2          |
